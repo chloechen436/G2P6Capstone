@@ -12,6 +12,10 @@ next_level = ExtResource("2_q0p0n")
 [node name="Player" parent="." index="0"]
 position = Vector2(49, 78)
 
+[node name="LevelTileMap" parent="." index="2"]
+layer_0/tile_data = PackedInt32Array(655375, 131072, 0, 655374, 65536, 0, 655373, 0, 0, 458755, 131072, 3, -720872, 196608, 0, -196585, 196608, 3, 262166, 196608, 3, -720896, 196608, 0, -655360, 196608, 2, -524288, 196608, 3, 262162, 196608, 1, 196626, 262144, 1, 524303, 131072, 2, 524302, 65536, 2, 524301, 65536, 2, 524300, 65536, 2, 524299, 65536, 2, 524298, 0, 2)
+metadata/_edit_group_ = true
+
 [node name="Spikes" parent="." index="3" instance=ExtResource("2_1xe7h")]
 position = Vector2(82, 96)
 
