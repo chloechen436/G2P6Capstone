@@ -2,15 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream
-uid="uid://il0ii16cyr3e"
-=======
-<<<<<<< HEAD
-uid="uid://c7l32ra4vppmy"
-=======
-uid="uid://il0ii16cyr3e"
->>>>>>> 640768a8267866b3e45517bc00f9645cfe6b6a86
->>>>>>> Stashed changes
+uid="uid://bk78v84gxel1h"
 path="res://.godot/imported/heartcollectible.png-aa53692831322423465a69c8f9e1729c.ctex"
 metadata={
 "vram_texture": false
