@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bta624lbp2atc"]
+[gd_scene load_steps=13 format=3 uid="uid://bkedmtoe4svf1"]
 
 [ext_resource type="Texture2D" uid="uid://d25gx76daua1f" path="res://EveningBackground.png" id="1_5ravq"]
 [ext_resource type="PackedScene" uid="uid://daqf0l4ldhyk3" path="res://player.tscn" id="1_618ui"]

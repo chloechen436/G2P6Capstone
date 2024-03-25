@@ -3,53 +3,44 @@
 [ext_resource type="Script" path="res://player.gd" id="1_xknsx"]
 [ext_resource type="Resource" uid="uid://c0hegwvq86b1k" path="res://DefaultMovementData.tres" id="2_0l8ta"]
 [ext_resource type="Texture2D" uid="uid://bohmjmjnltllq" path="res://player.png" id="2_2yn7x"]
-[ext_resource type="Texture2D" uid="uid://bpbg53qcox43f" path="res://character files/Walk-Sheet-Sheet.png" id="3_asw0y"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m8fh6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjpfv"]
+atlas = ExtResource("2_2yn7x")
+region = Rect2(0, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4spn"]
+atlas = ExtResource("2_2yn7x")
+region = Rect2(144, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvn2n"]
+atlas = ExtResource("2_2yn7x")
+region = Rect2(24, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ab0de"]
+atlas = ExtResource("2_2yn7x")
+region = Rect2(48, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ec6ro"]
+atlas = ExtResource("2_2yn7x")
+region = Rect2(72, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1krr"]
+atlas = ExtResource("2_2yn7x")
+region = Rect2(96, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbuh0"]
 atlas = ExtResource("2_2yn7x")
 region = Rect2(120, 0, 24, 20)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q3we3"]
-atlas = ExtResource("3_asw0y")
-region = Rect2(0, 0, 32, 95)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qglm5"]
-atlas = ExtResource("3_asw0y")
-region = Rect2(160, 0, 32, 99)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kfsnr"]
-atlas = ExtResource("3_asw0y")
-region = Rect2(32, 0, 32, 99)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hvaun"]
-atlas = ExtResource("3_asw0y")
-region = Rect2(64, 0, 32, 99)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wxdri"]
-atlas = ExtResource("3_asw0y")
-region = Rect2(96, 0, 32, 99)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k853q"]
-atlas = ExtResource("3_asw0y")
-region = Rect2(128, 0, 32, 99)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3ne1q"]
-atlas = ExtResource("3_asw0y")
-region = Rect2(0, 0, 32, 99)
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8mxv"]
+atlas = ExtResource("2_2yn7x")
+region = Rect2(0, 0, 24, 20)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cen0d"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m8fh6")
-}],
-"loop": true,
-"name": &"duck",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q3we3")
+"texture": SubResource("AtlasTexture_kjpfv")
 }],
 "loop": true,
 "name": &"idle",
@@ -57,7 +48,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qglm5")
+"texture": SubResource("AtlasTexture_j4spn")
 }],
 "loop": true,
 "name": &"jump",
@@ -65,27 +56,33 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kfsnr")
+"texture": SubResource("AtlasTexture_uvn2n")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hvaun")
+"texture": SubResource("AtlasTexture_ab0de")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wxdri")
+"texture": SubResource("AtlasTexture_ec6ro")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k853q")
+"texture": SubResource("AtlasTexture_d1krr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3ne1q")
+"texture": SubResource("AtlasTexture_mbuh0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8mxv")
 }],
 "loop": true,
 "name": &"run",
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ym2i0"]
+size = Vector2(8.75, 15.125)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sleqb"]
-size = Vector2(28, 26.6667)
+size = Vector2(16, 16)
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
@@ -96,16 +93,14 @@ script = ExtResource("1_xknsx")
 movement_data = ExtResource("2_0l8ta")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-3, -6.93557)
-scale = Vector2(0.75, 0.900265)
+position = Vector2(0, -10)
 sprite_frames = SubResource("SpriteFrames_cen0d")
-animation = &"duck"
-offset = Vector2(0, -7)
+animation = &"idle"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, -11)
-scale = Vector2(0.5, 0.75)
-shape = SubResource("RectangleShape2D_sleqb")
+position = Vector2(0, -7.4375)
+shape = SubResource("RectangleShape2D_ym2i0")
 
 [node name="CoyoteJumpTimer" type="Timer" parent="."]
 wait_time = 0.1
@@ -122,5 +117,10 @@ position_smoothing_speed = 10.0
 [node name="HazardDetector" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardDetector"]
+position = Vector2(0, -8)
+scale = Vector2(0.5, 0.75)
+shape = SubResource("RectangleShape2D_sleqb")
 
 [connection signal="area_entered" from="HazardDetector" to="." method="_on_hazard_detector_area_entered"]
