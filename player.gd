@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @export var movement_data : PlayerMovementData
 
+@export var speed = 400
+
 var air_jump = false
 var just_wall_jumped = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -35,6 +37,10 @@ func _physics_process(delta):
 	if just_left_wall:
 		wall_jump_timer.start()
 	
+	if Input.is_action_pressed ("duck"):
+		animated_sprite_2d.play("duck")
+		velocity.y += 1
+		
 func apply_gravity(delta):
 	if not is_on_floor():
 		velocity.y += gravity * movement_data.gravity_scale * delta
