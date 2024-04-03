@@ -474,17 +474,19 @@ position = Vector2(2131, -80)
 [node name="Spikes60" parent="Spikes" instance=ExtResource("7_ghp5w")]
 position = Vector2(3284, 128)
 
-[node name="Heart" parent="." instance=ExtResource("9_6cdlh")]
+[node name="Hearts" type="Node2D" parent="."]
+
+[node name="Heart" parent="Hearts" instance=ExtResource("9_6cdlh")]
 position = Vector2(83, 52)
 
-[node name="Heart2" parent="." instance=ExtResource("9_6cdlh")]
+[node name="Heart2" parent="Hearts" instance=ExtResource("9_6cdlh")]
 position = Vector2(148, -84)
 
-[node name="Heart3" parent="." instance=ExtResource("9_6cdlh")]
+[node name="Heart3" parent="Hearts" instance=ExtResource("9_6cdlh")]
 position = Vector2(232, 67)
 
-[node name="Heart4" parent="." instance=ExtResource("9_6cdlh")]
+[node name="Heart4" parent="Hearts" instance=ExtResource("9_6cdlh")]
 position = Vector2(382, -33)
 
-[node name="Heart5" parent="." instance=ExtResource("9_6cdlh")]
+[node name="Heart5" parent="Hearts" instance=ExtResource("9_6cdlh")]
 position = Vector2(688, -153)
