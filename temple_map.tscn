@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cblk1rdootdmy" path="res://Night background.png" id="3_ivipn"]
 [ext_resource type="PackedScene" uid="uid://ct4nmqbu40vrf" path="res://spikes.tscn" id="7_ghp5w"]
 [ext_resource type="PackedScene" uid="uid://b7ssnkt4brfcg" path="res://heart.tscn" id="9_6cdlh"]
-[ext_resource type="PackedScene" path="res://coins.tscn" id="10_6dir6"]
+[ext_resource type="PackedScene" uid="uid://bqjwq50pfpy5k" path="res://coins.tscn" id="10_6dir6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_obabp"]
 texture = ExtResource("1_qyuqs")
