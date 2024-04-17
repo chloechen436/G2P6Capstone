@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bkedmtoe4svf1"]
+[gd_scene load_steps=17 format=3 uid="uid://bkedmtoe4svf1"]
 
 [ext_resource type="Texture2D" uid="uid://d25gx76daua1f" path="res://EveningBackground.png" id="1_5ravq"]
 [ext_resource type="Script" path="res://temple_map.gd" id="1_77e25"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b7ssnkt4brfcg" path="res://heart.tscn" id="9_6cdlh"]
 [ext_resource type="PackedScene" uid="uid://bqjwq50pfpy5k" path="res://coins.tscn" id="10_6dir6"]
 [ext_resource type="PackedScene" uid="uid://cbmvs6l784pvc" path="res://level_completed.tscn" id="12_pkw0r"]
+[ext_resource type="PackedScene" uid="uid://bx61lnyck3ato" path="res://coins_remaining.tscn" id="13_m2he2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_obabp"]
 texture = ExtResource("1_qyuqs")
@@ -559,3 +560,7 @@ offset_left = -7.0
 offset_top = -42.0
 offset_right = -7.0
 offset_bottom = -42.0
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="CoinsRemaining" parent="CanvasLayer2" instance=ExtResource("13_m2he2")]
