@@ -6,11 +6,15 @@ var air_jump = false
 var just_wall_jumped = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var was_wall_normal = Vector2.ZERO
+@onready var label = $CenterContainer/Label
+
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var coyote_jump_timer = $CoyoteJumpTimer
 @onready var starting_position = global_position
 @onready var wall_jump_timer = $WallJumpTimer
+
+var coins_count : int = 9
 
 func _physics_process(delta):
 	apply_gravity(delta)
@@ -94,3 +98,15 @@ func update_animations(input_axis):
 
 func _on_hazard_detector_area_entered(area):
 	global_position = starting_position
+
+func _ready():
+	pass
+
+func collide_with_coin():
+	if area.is_in_group("Coins"):
+		coin_count -= 1
+		print("coin count: ", collectible_count)
+
+
+func coins_remaining():
+	
