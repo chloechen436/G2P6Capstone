@@ -99,14 +99,14 @@ func update_animations(input_axis):
 func _on_hazard_detector_area_entered(area):
 	global_position = starting_position
 
-func _ready():
-	pass
+#func _ready():
+	#pass
 
-func collide_with_coin():
-	if area.is_in_group("Coins"):
-		coin_count -= 1
-		print("coin count: ", collectible_count)
+#func collide_with_coin():
+	#if area.is_in_group("Coins"):
+		#coin_count -= 1
+		#print("coin count: ", collectible_count)
 
 
-func coins_remaining():
+#func coins_remaining():
 	
