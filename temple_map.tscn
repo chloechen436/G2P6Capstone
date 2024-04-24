@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cjhatxej0mqxp" path="res://Kenney/tile_0000.png" id="1_qyuqs"]
 [ext_resource type="Texture2D" uid="uid://dgvwccgnnq743" path="res://morning.png" id="2_0i2f0"]
 [ext_resource type="Texture2D" uid="uid://wl8dwse8uuos" path="res://Kenney/tile_0011.png" id="2_u8iyh"]
-[ext_resource type="Texture2D" uid="uid://b243an3hkhgqo" path="res://new_morning.png" id="3_cl284"]
+[ext_resource type="Texture2D" uid="uid://bjcw73tjjw6hk" path="res://new_morning.png" id="3_cl284"]
 [ext_resource type="Texture2D" uid="uid://cblk1rdootdmy" path="res://Night background.png" id="3_ivipn"]
 [ext_resource type="PackedScene" uid="uid://ct4nmqbu40vrf" path="res://spikes.tscn" id="7_ghp5w"]
 [ext_resource type="PackedScene" uid="uid://b7ssnkt4brfcg" path="res://heart.tscn" id="9_6cdlh"]
