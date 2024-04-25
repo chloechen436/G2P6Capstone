@@ -14,7 +14,11 @@ var was_wall_normal = Vector2.ZERO
 @onready var starting_position = global_position
 @onready var wall_jump_timer = $WallJumpTimer
 
-var coins_count : int = 9
+@export var ui: UI
+
+@export var lifes = 3
+
+@export var coins_left = 9
 
 func _physics_process(delta):
 	apply_gravity(delta)
@@ -98,6 +102,16 @@ func update_animations(input_axis):
 
 func _on_hazard_detector_area_entered(area):
 	global_position = starting_position
+	
+
+func _on_coins_child_entered_tree(area):
+	coins_left -=1
+	if coins_left == 0:
+		pass
+	print(coins_left)
+
+#func _on_coins_collected():
+	
 
 #func _ready():
 	#pass
@@ -106,7 +120,11 @@ func _on_hazard_detector_area_entered(area):
 	#if area.is_in_group("Coins"):
 		#coin_count -= 1
 		#print("coin count: ", collectible_count)
+	
+	#if area.is_in_group("Coins"):
+		#coins -= 1
+	#print(coins)
+	#print("coin count: ", collectible_count)
+	#pass # Replace with function body.
 
-
-#func coins_remaining():
 	

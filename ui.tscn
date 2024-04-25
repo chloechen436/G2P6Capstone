@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxeg8vwexj4e1"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_a2ly1"]
+
+[sub_resource type="SystemFont" id="SystemFont_fcoqg"]
+subpixel_positioning = 0
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_a2ly1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="CoinsLeftLabel" type="Label" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = SubResource("SystemFont_fcoqg")
+theme_override_font_sizes/font_size = 10
+text = "Coins Left: 9"
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

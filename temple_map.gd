@@ -5,7 +5,16 @@ extends Node2D
 @onready var level_completed = $CanvasLayer/LevelCompleted
 
 func _ready():
+	#ui.set_coins_left(coins_left)
 	Events.level_completed.connect(show_level_completed)
+	
+func on_coins_collected():
+	#coins_left -= 1
+	#if coins_left == 0:
+		pass
+	#else:
+		#ui.set_coins_left(coins_left)#
+		#set_coins_left(coins_left: int)#
 	
 func show_level_completed():
 	level_completed.show()

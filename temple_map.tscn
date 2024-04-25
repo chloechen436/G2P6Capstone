@@ -1,16 +1,17 @@
-[gd_scene load_steps=17 format=3 uid="uid://bkedmtoe4svf1"]
+[gd_scene load_steps=18 format=3 uid="uid://bkedmtoe4svf1"]
 
 [ext_resource type="Texture2D" uid="uid://d25gx76daua1f" path="res://EveningBackground.png" id="1_5ravq"]
 [ext_resource type="Script" path="res://temple_map.gd" id="1_77e25"]
 [ext_resource type="PackedScene" uid="uid://daqf0l4ldhyk3" path="res://player.tscn" id="1_618ui"]
 [ext_resource type="Texture2D" uid="uid://cjhatxej0mqxp" path="res://Kenney/tile_0000.png" id="1_qyuqs"]
 [ext_resource type="Texture2D" uid="uid://dgvwccgnnq743" path="res://morning.png" id="2_0i2f0"]
+[ext_resource type="PackedScene" uid="uid://dxeg8vwexj4e1" path="res://ui.tscn" id="2_6hff4"]
 [ext_resource type="Texture2D" uid="uid://wl8dwse8uuos" path="res://Kenney/tile_0011.png" id="2_u8iyh"]
 [ext_resource type="Texture2D" uid="uid://bjcw73tjjw6hk" path="res://new_morning.png" id="3_cl284"]
 [ext_resource type="Texture2D" uid="uid://cblk1rdootdmy" path="res://Night background.png" id="3_ivipn"]
 [ext_resource type="PackedScene" uid="uid://ct4nmqbu40vrf" path="res://spikes.tscn" id="7_ghp5w"]
 [ext_resource type="PackedScene" uid="uid://b7ssnkt4brfcg" path="res://heart.tscn" id="9_6cdlh"]
-[ext_resource type="PackedScene" uid="uid://bqjwq50pfpy5k" path="res://coins.tscn" id="10_6dir6"]
+[ext_resource type="PackedScene" uid="uid://dh2he65rwghvm" path="res://coins.tscn" id="10_6dir6"]
 [ext_resource type="PackedScene" uid="uid://cbmvs6l784pvc" path="res://level_completed.tscn" id="12_pkw0r"]
 [ext_resource type="PackedScene" uid="uid://bx61lnyck3ato" path="res://coins_remaining.tscn" id="13_m2he2"]
 
@@ -49,8 +50,11 @@ sources/1 = SubResource("TileSetAtlasSource_dyyu8")
 [node name="TempleMap" type="Node2D"]
 script = ExtResource("1_77e25")
 
-[node name="Player" parent="." instance=ExtResource("1_618ui")]
+[node name="UI" parent="." instance=ExtResource("2_6hff4")]
+
+[node name="Player" parent="." node_paths=PackedStringArray("ui") instance=ExtResource("1_618ui")]
 position = Vector2(-8, -17)
+ui = NodePath("../UI")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -565,3 +569,6 @@ offset_bottom = -42.0
 
 [node name="CoinsRemaining" parent="CanvasLayer2" instance=ExtResource("13_m2he2")]
 metadata/_edit_use_anchors_ = true
+
+[connection signal="tree_entered" from="Player" to="Coins/Coins" method="_on_player_tree_entered"]
+[connection signal="child_entered_tree" from="Coins" to="Player" method="_on_coins_child_entered_tree"]
