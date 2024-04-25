@@ -81,8 +81,8 @@ texture = ExtResource("14_5j7ie")
 
 [node name="Evening Scene" type="Sprite2D" parent="."]
 show_behind_parent = true
-position = Vector2(1393.5, -177.375)
-scale = Vector2(0.711886, 1.03125)
+position = Vector2(1393.75, -176.188)
+scale = Vector2(0.728036, 1.02991)
 texture = ExtResource("5_dj1xl")
 
 [node name="Night Scene" type="Sprite2D" parent="."]
@@ -521,6 +521,27 @@ position = Vector2(728, 160)
 [node name="Spikes134" parent="Spikes" instance=ExtResource("7_ghp5w")]
 position = Vector2(744, 160)
 
+[node name="Spikes135" parent="Spikes" instance=ExtResource("7_ghp5w")]
+position = Vector2(1120, -112)
+
+[node name="Spikes136" parent="Spikes" instance=ExtResource("7_ghp5w")]
+position = Vector2(1136, -112)
+
+[node name="Spikes137" parent="Spikes" instance=ExtResource("7_ghp5w")]
+position = Vector2(1153, -224)
+
+[node name="Spikes138" parent="Spikes" instance=ExtResource("7_ghp5w")]
+position = Vector2(1328, -192)
+
+[node name="Spikes139" parent="Spikes" instance=ExtResource("7_ghp5w")]
+position = Vector2(1264, -160)
+
+[node name="Spikes140" parent="Spikes" instance=ExtResource("7_ghp5w")]
+position = Vector2(1480, -224)
+
+[node name="Spikes141" parent="Spikes" instance=ExtResource("7_ghp5w")]
+position = Vector2(1576, -160)
+
 [node name="Hearts" type="Node2D" parent="."]
 
 [node name="Heart" parent="Hearts" instance=ExtResource("9_6cdlh")]
@@ -543,6 +564,15 @@ position = Vector2(625, 88)
 
 [node name="Heart7" parent="Hearts" instance=ExtResource("9_6cdlh")]
 position = Vector2(472, 85)
+
+[node name="Heart8" parent="Hearts" instance=ExtResource("9_6cdlh")]
+position = Vector2(1168, -120)
+
+[node name="Heart9" parent="Hearts" instance=ExtResource("9_6cdlh")]
+position = Vector2(1216, -200)
+
+[node name="Heart10" parent="Hearts" instance=ExtResource("9_6cdlh")]
+position = Vector2(1648, -120)
 
 [node name="Coins" type="Node2D" parent="."]
 
@@ -573,6 +603,18 @@ position = Vector2(347, 85)
 [node name="Coins9" parent="Coins" instance=ExtResource("10_6dir6")]
 position = Vector2(828, 23)
 
+[node name="Coins10" parent="Coins" instance=ExtResource("10_6dir6")]
+position = Vector2(1136, -232)
+
+[node name="Coins11" parent="Coins" instance=ExtResource("10_6dir6")]
+position = Vector2(1400, -232)
+
+[node name="Coins12" parent="Coins" instance=ExtResource("10_6dir6")]
+position = Vector2(1544, -184)
+
+[node name="Coins13" parent="Coins" instance=ExtResource("10_6dir6")]
+position = Vector2(1216, -136)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="LevelCompleted" parent="CanvasLayer" instance=ExtResource("12_pkw0r")]
@@ -586,5 +628,3 @@ offset_bottom = -42.0
 
 [node name="CoinsRemaining" parent="CanvasLayer2" instance=ExtResource("13_m2he2")]
 metadata/_edit_use_anchors_ = true
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
