@@ -17,3 +17,8 @@ scale = Vector2(1.15456, 1)
 visible = false
 
 [node name="LevelTileMap" parent="." instance=ExtResource("6_jgyf2")]
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
