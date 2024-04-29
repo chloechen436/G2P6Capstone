@@ -1322,12 +1322,14 @@ offset_bottom = -42.0
 [node name="CoinsRemaining" parent="CanvasLayer2" instance=ExtResource("13_m2he2")]
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="."]
+[node name="Welcome to The Lost Temple" type="Label" parent="."]
 offset_left = 157.0
 offset_top = -1919.0
 offset_right = 1451.0
 offset_bottom = -1816.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.00392157, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 0.996078, 1)
 theme_override_fonts/font = SubResource("FontFile_m246o")
 theme_override_font_sizes/font_size = 60
 text = "Welcome to The Lost Temple"
