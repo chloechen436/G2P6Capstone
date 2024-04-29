@@ -14,6 +14,8 @@ var was_wall_normal = Vector2.ZERO
 @onready var starting_position = global_position
 @onready var wall_jump_timer = $WallJumpTimer
 
+@onready var bg_music = $"../BGMusic"
+
 var coins_count : int = 9
 
 func _physics_process(delta):
