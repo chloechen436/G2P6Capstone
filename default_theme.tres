@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://blhqps45omcuq"]
 
-[ext_resource type="StyleBox" uid="uid://3l3mqhymi5c6" path="res://black_9slice.tres" id="1_h7ghb"]
+[ext_resource type="StyleBox" path="res://Extra Game Stuff/black_9slice.tres" id="1_h7ghb"]
 [ext_resource type="StyleBox" uid="uid://d3pxc1booy8vp" path="res://white_9slice.tres" id="2_vmbov"]
 
 [resource]

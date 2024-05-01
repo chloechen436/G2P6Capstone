@@ -6,6 +6,9 @@ var air_jump = false
 var just_wall_jumped = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var was_wall_normal = Vector2.ZERO
+
+var death_pos = Vector2(-8, 1380)
+
 @onready var label = $CenterContainer/Label
 
 
@@ -40,6 +43,7 @@ func _physics_process(delta):
 	var just_left_wall = was_on_wall and not is_on_wall()
 	if just_left_wall:
 		wall_jump_timer.start()
+
 	
 func apply_gravity(delta):
 	if not is_on_floor():
@@ -99,7 +103,7 @@ func update_animations(input_axis):
 
 
 func _on_hazard_detector_area_entered(area):
-	global_position = starting_position
+	global_position = death_pos
 
 #func _ready():
 	#pass

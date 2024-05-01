@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cksfhmp8lqbsf"]
+
+[ext_resource type="Texture2D" uid="uid://bynkd4lxs6sja" path="res://heart.png" id="1_lbpwf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6yyr2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lbpwf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gp5rh"]
+size = Vector2(4, 9)
+
+[node name="CheckPoint" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6yyr2")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -0.5)
+shape = SubResource("RectangleShape2D_gp5rh")
