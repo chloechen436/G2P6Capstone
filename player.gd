@@ -18,6 +18,8 @@ var was_wall_normal = Vector2.ZERO
 
 var coins_count : int = 9
 
+var death_pos = Vector2(-8, 1380)
+
 func _physics_process(delta):
 	apply_gravity(delta)
 	handle_wall_jump()
@@ -99,7 +101,7 @@ func update_animations(input_axis):
 
 
 func _on_hazard_detector_area_entered(area):
-	global_position = starting_position
+	global_position = death_pos
 
 #func _ready():
 	#pass
