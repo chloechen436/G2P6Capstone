@@ -16,6 +16,4 @@ func show_level_completed():
 	#get_tree().paused = false
 	#get_tree().change_scene_to_packed(next_level)
 	LevelTransition.fade_from_black()
-	
-
 

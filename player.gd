@@ -112,3 +112,4 @@ func _on_hazard_detector_area_entered(area):
 
 #func coins_remaining():
 	
+
