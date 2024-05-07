@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cjhatxej0mqxp" path="res://Kenney/tile_0000.png" id="1_qyuqs"]
 [ext_resource type="Texture2D" uid="uid://wl8dwse8uuos" path="res://Kenney/tile_0011.png" id="2_u8iyh"]
 [ext_resource type="Texture2D" uid="uid://b0lx6a7c5y67b" path="res://morningbg5.png" id="3_xy1vs"]
-[ext_resource type="Texture2D" uid="uid://bjcw73tjjw6hk" path="res://new_morning.png" id="4_53hxu"]
+[ext_resource type="Texture2D" uid="uid://cnd6u3hh5lyos" path="res://menulosttemple.png" id="4_6us8m"]
 [ext_resource type="Texture2D" uid="uid://b8tivxovyur6t" path="res://Eveningnight.png" id="5_dj1xl"]
 [ext_resource type="Texture2D" uid="uid://ccv4ffh8eys2u" path="res://nightbg.png" id="6_balii"]
 [ext_resource type="Texture2D" uid="uid://ccglnye7ske5u" path="res://bymorningBG.png" id="6_t4eck"]
@@ -73,9 +73,9 @@ texture = ExtResource("3_xy1vs")
 
 [node name="Outside Scene2" type="Sprite2D" parent="."]
 show_behind_parent = true
-position = Vector2(540, -1736)
-scale = Vector2(6.85938, 7.1875)
-texture = ExtResource("4_53hxu")
+position = Vector2(541, -1739.69)
+scale = Vector2(0.346094, 0.360449)
+texture = ExtResource("4_6us8m")
 
 [node name="Morning Scene" type="Sprite2D" parent="."]
 show_behind_parent = true
