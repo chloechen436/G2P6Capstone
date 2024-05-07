@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cela5gc54eiau"]
 
 [ext_resource type="Script" path="res://start_menu.gd" id="1_18sx0"]
-[ext_resource type="Texture2D" uid="uid://ccglnye7ske5u" path="res://bymorningBG.png" id="2_l3yoc"]
+[ext_resource type="Texture2D" uid="uid://cnd6u3hh5lyos" path="res://menulosttemple.png" id="2_evqou"]
 
 [sub_resource type="FontFile" id="FontFile_gb0ks"]
 cache/0/10/0/ascent = 0.0
@@ -79,9 +79,9 @@ text = "Quit Game
 
 [node name="StartBG" type="Sprite2D" parent="."]
 show_behind_parent = true
-position = Vector2(162, 87.5)
-scale = Vector2(0.234286, 0.236)
-texture = ExtResource("2_l3yoc")
+position = Vector2(158, 89)
+scale = Vector2(0.125781, 0.142187)
+texture = ExtResource("2_evqou")
 
 [connection signal="pressed" from="VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
