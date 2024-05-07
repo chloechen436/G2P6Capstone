@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cela5gc54eiau"]
+[gd_scene load_steps=5 format=3 uid="uid://cela5gc54eiau"]
 
 [ext_resource type="Script" path="res://start_menu.gd" id="1_18sx0"]
+[ext_resource type="Texture2D" uid="uid://cumsjkd4aei85" path="res://BossroomBackground.png" id="2_ed2cr"]
 
 [sub_resource type="FontFile" id="FontFile_gb0ks"]
 cache/0/10/0/ascent = 0.0
@@ -75,6 +76,12 @@ theme_override_fonts/font = SubResource("FontFile_wgwfj")
 theme_override_font_sizes/font_size = 15
 text = "Quit Game
 "
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(157, 88.5)
+scale = Vector2(0.166667, 0.165741)
+texture = ExtResource("2_ed2cr")
 
 [connection signal="pressed" from="VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
