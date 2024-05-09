@@ -59,6 +59,7 @@ script = ExtResource("1_77e25")
 
 [node name="Player" parent="." instance=ExtResource("1_618ui")]
 position = Vector2(-8, -17)
+collision_mask = 3
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -1285,8 +1286,12 @@ texture = ExtResource("19_wy8nb")
 
 [node name="DoorScene" parent="." node_paths=PackedStringArray("linked_coins") instance=ExtResource("21_768b4")]
 position = Vector2(1139, -64)
+collision_layer = 2
+collision_mask = 3
 linked_coins = [NodePath("../Coins/Coins"), NodePath("../Coins/Coins2"), NodePath("../Coins/Coins3"), NodePath("../Coins/Coins4"), NodePath("../Coins/Coins5"), NodePath("../Coins/Coins6"), NodePath("../Coins/Coins7"), NodePath("../Coins/Coins8"), NodePath("../Coins/Coins9")]
 
 [node name="DoorScene2" parent="." node_paths=PackedStringArray("linked_coins") instance=ExtResource("21_768b4")]
 position = Vector2(1649, -64)
+collision_layer = 2
+collision_mask = 3
 linked_coins = [NodePath("../Coins/Coins10"), NodePath("../Coins/Coins11"), NodePath("../Coins/Coins12"), NodePath("../Coins/Coins13")]

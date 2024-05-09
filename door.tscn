@@ -20,6 +20,8 @@ shape = SubResource("RectangleShape2D_tbdhf")
 texture = ExtResource("2_ijpbc")
 
 [node name="player_check_area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_check_area"]
 position = Vector2(-63, 10.5)

@@ -13,7 +13,10 @@ func _process(delta):
 
 
 func _on_player_check_area_body_entered(body):
+	print("collisio with: " + body.name)
+	print("checking all coins")
 	if are_coins_collected():
+		print("no coins found, destorying door")
 		#if all the coins are collected, destroy this door.
 		destroy_door()
 	pass # Replace with function body.
@@ -22,7 +25,9 @@ func _on_player_check_area_body_entered(body):
 func are_coins_collected():
 	for coin in linked_coins:
 		if coin != null:
+			print("coin " + coin.name + "is not null")
 			return false
+	print("no coins found")
 	return true
 
 #destroy the door
