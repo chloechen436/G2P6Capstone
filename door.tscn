@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bibhsu8c6vte0"]
+
+[ext_resource type="Script" path="res://door.gd" id="1_kj8xw"]
+[ext_resource type="Texture2D" uid="uid://rek83qr2sfg5" path="res://Potal door.png" id="2_ijpbc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbdhf"]
+size = Vector2(59, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38c27"]
+size = Vector2(64, 43)
+
+[node name="DoorScene" type="StaticBody2D"]
+script = ExtResource("1_kj8xw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 5.5)
+shape = SubResource("RectangleShape2D_tbdhf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ijpbc")
+
+[node name="player_check_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_check_area"]
+position = Vector2(-63, 10.5)
+shape = SubResource("RectangleShape2D_38c27")
+
+[connection signal="body_entered" from="player_check_area" to="." method="_on_player_check_area_body_entered"]
