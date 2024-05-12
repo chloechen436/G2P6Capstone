@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://daqf0l4ldhyk3"]
+[gd_scene load_steps=18 format=3 uid="uid://daqf0l4ldhyk3"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_xknsx"]
 [ext_resource type="Resource" uid="uid://c0hegwvq86b1k" path="res://DefaultMovementData.tres" id="2_0l8ta"]
@@ -79,6 +79,11 @@ size = Vector2(10.375, 13.5625)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sleqb"]
 size = Vector2(16, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5k24a"]
+size = Vector2(16, 15.3333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tt0n"]
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 floor_constant_speed = true
@@ -134,4 +139,24 @@ position = Vector2(459, -1689)
 scale = Vector2(0.5, 0.75)
 shape = SubResource("RectangleShape2D_sleqb")
 
+[node name="2_HazardDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2_HazardDetector"]
+position = Vector2(540, -1699)
+scale = Vector2(0.5, 0.75)
+shape = SubResource("RectangleShape2D_5k24a")
+
+[node name="3_H3zardDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="3_H3zardDetector"]
+position = Vector2(540, -1699)
+scale = Vector2(0.5, 0.75)
+shape = SubResource("RectangleShape2D_0tt0n")
+
 [connection signal="area_entered" from="HazardDetector" to="." method="_on_hazard_detector_area_entered"]
+[connection signal="area_entered" from="2_HazardDetector" to="." method="_on__hazard_detector_area_entered"]
+[connection signal="area_entered" from="3_H3zardDetector" to="." method="_on__h_3_zard_detector_area_entered"]

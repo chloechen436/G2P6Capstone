@@ -1,16 +1,16 @@
-[gd_scene load_steps=25 format=3 uid="uid://bkedmtoe4svf1"]
+[gd_scene load_steps=27 format=3 uid="uid://bkedmtoe4svf1"]
 
 [ext_resource type="Script" path="res://temple_map.gd" id="1_77e25"]
 [ext_resource type="PackedScene" uid="uid://daqf0l4ldhyk3" path="res://player.tscn" id="1_618ui"]
 [ext_resource type="Texture2D" uid="uid://cjhatxej0mqxp" path="res://Kenney/tile_0000.png" id="1_qyuqs"]
 [ext_resource type="Texture2D" uid="uid://wl8dwse8uuos" path="res://Kenney/tile_0011.png" id="2_u8iyh"]
-[ext_resource type="Texture2D" uid="uid://b0lx6a7c5y67b" path="res://morningbg5.png" id="3_xy1vs"]
-[ext_resource type="Texture2D" uid="uid://cnd6u3hh5lyos" path="res://menulosttemple.png" id="4_6us8m"]
+[ext_resource type="Texture2D" uid="uid://brmr1aljwkvk1" path="res://morningbg5.png" id="3_xy1vs"]
+[ext_resource type="Texture2D" uid="uid://c4yswpksrch1o" path="res://menulosttemple.png" id="4_6us8m"]
 [ext_resource type="Texture2D" uid="uid://b8tivxovyur6t" path="res://Eveningnight.png" id="5_dj1xl"]
 [ext_resource type="Texture2D" uid="uid://ccv4ffh8eys2u" path="res://nightbg.png" id="6_balii"]
 [ext_resource type="Texture2D" uid="uid://ccglnye7ske5u" path="res://bymorningBG.png" id="6_t4eck"]
 [ext_resource type="PackedScene" uid="uid://ct4nmqbu40vrf" path="res://spikes.tscn" id="7_ghp5w"]
-[ext_resource type="Texture2D" uid="uid://dtix5q77cl8ut" path="res://nightbackg1.png" id="7_wt04i"]
+[ext_resource type="Texture2D" uid="uid://d21ys07kr0uky" path="res://nightbackg1.png" id="7_wt04i"]
 [ext_resource type="PackedScene" uid="uid://b7ssnkt4brfcg" path="res://heart.tscn" id="9_6cdlh"]
 [ext_resource type="Texture2D" uid="uid://bqw2ckn6hglsf" path="res://mainbg.png" id="9_sbvmk"]
 [ext_resource type="PackedScene" uid="uid://bqjwq50pfpy5k" path="res://coins.tscn" id="10_6dir6"]
@@ -18,9 +18,11 @@
 [ext_resource type="PackedScene" uid="uid://bx61lnyck3ato" path="res://coins_remaining.tscn" id="13_m2he2"]
 [ext_resource type="Texture2D" uid="uid://cf0051sgbjuve" path="res:// Inside BackGround.png" id="14_5j7ie"]
 [ext_resource type="AudioStream" uid="uid://du6xmk2p17ki1" path="res://Sounds/coinpickup.mp3" id="18_js4ld"]
-[ext_resource type="AudioStream" uid="uid://b8mpcmxgwfdv7" path="res://Sounds/ninjabgm.mp3" id="19_hlbs0"]
-[ext_resource type="Texture2D" uid="uid://coqxjg34xo4b" path="res://downbg.png" id="19_wy8nb"]
-[ext_resource type="PackedScene" uid="uid://bibhsu8c6vte0" path="res://door.tscn" id="21_768b4"]
+[ext_resource type="AudioStream" uid="uid://cqhmbbc1mns4m" path="res://Sounds/ninjabgm.mp3" id="19_hlbs0"]
+[ext_resource type="Texture2D" uid="uid://7scg0uyl4qtm" path="res://downbg.png" id="19_wy8nb"]
+[ext_resource type="PackedScene" path="res://door.tscn" id="21_768b4"]
+[ext_resource type="PackedScene" uid="uid://cls6mwqex02ws" path="res://2_spikes.tscn" id="22_bqocn"]
+[ext_resource type="PackedScene" uid="uid://bdlp4w1mvykoh" path="res://3_spikes.tscn" id="23_60v8f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_obabp"]
 texture = ExtResource("1_qyuqs")
@@ -123,41 +125,14 @@ layer_0/tile_data = PackedInt32Array(65535, 0, 0, 0, 0, 0, 65536, 0, 0, 131071, 
 
 [node name="Spikes" type="Node" parent="."]
 
-[node name="Spikes" parent="Spikes" instance=ExtResource("7_ghp5w")]
-position = Vector2(19, 144)
-
-[node name="Spikes2" parent="Spikes" instance=ExtResource("7_ghp5w")]
-position = Vector2(33, 144)
-
-[node name="Spikes3" parent="Spikes" instance=ExtResource("7_ghp5w")]
-position = Vector2(49, 144)
-
-[node name="Spikes4" parent="Spikes" instance=ExtResource("7_ghp5w")]
-position = Vector2(97, 160)
-
-[node name="Spikes5" parent="Spikes" instance=ExtResource("7_ghp5w")]
-position = Vector2(114, 160)
-
 [node name="Spikes6" parent="Spikes" instance=ExtResource("7_ghp5w")]
 position = Vector2(1, 0)
-
-[node name="Spikes7" parent="Spikes" instance=ExtResource("7_ghp5w")]
-position = Vector2(146, 112)
-
-[node name="Spikes8" parent="Spikes" instance=ExtResource("7_ghp5w")]
-position = Vector2(210, 128)
 
 [node name="Spikes9" parent="Spikes" instance=ExtResource("7_ghp5w")]
 position = Vector2(384, 0)
 
 [node name="Spikes10" parent="Spikes" instance=ExtResource("7_ghp5w")]
 position = Vector2(369, 0)
-
-[node name="Spikes11" parent="Spikes" instance=ExtResource("7_ghp5w")]
-position = Vector2(306, 80)
-
-[node name="Spikes12" parent="Spikes" instance=ExtResource("7_ghp5w")]
-position = Vector2(291, 80)
 
 [node name="Spikes13" parent="Spikes" instance=ExtResource("7_ghp5w")]
 position = Vector2(147, -48)
@@ -523,21 +498,6 @@ position = Vector2(728, 160)
 
 [node name="Spikes134" parent="Spikes" instance=ExtResource("7_ghp5w")]
 position = Vector2(744, 160)
-
-[node name="Spikes135" parent="Spikes" instance=ExtResource("7_ghp5w")]
-position = Vector2(1120, -112)
-
-[node name="Spikes136" parent="Spikes" instance=ExtResource("7_ghp5w")]
-position = Vector2(1136, -112)
-
-[node name="Spikes137" parent="Spikes" instance=ExtResource("7_ghp5w")]
-position = Vector2(1153, -224)
-
-[node name="Spikes138" parent="Spikes" instance=ExtResource("7_ghp5w")]
-position = Vector2(1328, -192)
-
-[node name="Spikes139" parent="Spikes" instance=ExtResource("7_ghp5w")]
-position = Vector2(1264, -160)
 
 [node name="Spikes140" parent="Spikes" instance=ExtResource("7_ghp5w")]
 position = Vector2(1480, -224)
@@ -1556,7 +1516,7 @@ linked_coins = [NodePath("../Coins/Coins10"), NodePath("../Coins/Coins11"), Node
 
 [node name="DoorScene3" parent="." node_paths=PackedStringArray("linked_coins") instance=ExtResource("21_768b4")]
 position = Vector2(3489, 64)
-linked_coins = [NodePath("../Coins/Coins14"), NodePath("../Coins/Coins15"), NodePath("../Coins/Coins16"), NodePath("../Coins/Coins17"), NodePath("../Coins/Coins18"), NodePath("../Coins/Coins19"), NodePath("../Coins/Coins20"), NodePath("../Coins/Coins21"), NodePath("../Coins/Coins22"), NodePath("../Coins/Coins23"), NodePath("../Coins/Coins24"), NodePath("../Coins/Coins25"), NodePath("../Coins/Coins26"), NodePath("../Coins/Coins27"), NodePath("../Coins/Coins28"), NodePath("../Coins2"), NodePath("../Coins3"), NodePath("../Coins4"), NodePath("../Coins5"), NodePath("../Coins6"), NodePath("../Coins7"), NodePath("../Coins8"), NodePath("../Coins9"), NodePath("../Coins10"), NodePath("../Coins11"), NodePath("../Coins12"), NodePath("../Coins13"), NodePath("../Coins14")]
+linked_coins = [NodePath("../Coins/Coins14"), NodePath("../Coins/Coins15"), NodePath("../Coins/Coins16"), NodePath("../Coins/Coins17"), NodePath("../Coins/Coins18"), NodePath("../Coins/Coins19"), NodePath("../Coins/Coins20"), NodePath("../Coins/Coins21"), NodePath("../Coins/Coins22"), NodePath("../Coins/Coins23"), NodePath("../Coins/Coins24"), NodePath("../Coins/Coins25"), NodePath("../Coins/Coins26"), NodePath("../Coins/Coins27"), NodePath("../Coins/Coins28"), NodePath("../Coinss/Coins2"), NodePath("../Coinss/Coins3"), NodePath("../Coinss/Coins4"), NodePath("../Coinss/Coins5"), NodePath("../Coinss/Coins6"), NodePath("../Coinss/Coins7"), NodePath("../Coinss/Coins8"), NodePath("../Coinss/Coins9"), NodePath("../Coinss/Coins10"), NodePath("../Coinss/Coins11"), NodePath("../Coinss/Coins12"), NodePath("../Coinss/Coins13"), NodePath("../Coinss/Coins14")]
 
 [node name="DoorScene4" parent="." node_paths=PackedStringArray("linked_coins") instance=ExtResource("21_768b4")]
 position = Vector2(5270, 351)
@@ -1575,41 +1535,87 @@ position = Vector2(8633, 414)
 scale = Vector2(1.45412, 1.55811)
 linked_coins = [NodePath("../Coins/Coins89"), NodePath("../Coins/Coins90"), NodePath("../Coins/Coins91"), NodePath("../Coins/Coins92"), NodePath("../Coins/Coins93"), NodePath("../Coins/Coins94"), NodePath("../Coins/Coins95"), NodePath("../Coins/Coins96"), NodePath("../Coins/Coins97"), NodePath("../Coins/Coins98"), NodePath("../Coins/Coins99"), NodePath("../Coins/Coins100")]
 
-[node name="Coins2" parent="." instance=ExtResource("10_6dir6")]
+[node name="2-Spikes" type="Node" parent="."]
+
+[node name="2_Spikes3" parent="2-Spikes" instance=ExtResource("22_bqocn")]
+position = Vector2(220, 120)
+
+[node name="2_Spikes4" parent="2-Spikes" instance=ExtResource("22_bqocn")]
+position = Vector2(156, 105)
+
+[node name="2_Spikes5" parent="2-Spikes" instance=ExtResource("22_bqocn")]
+position = Vector2(123, 152)
+
+[node name="2_Spikes6" parent="2-Spikes" instance=ExtResource("22_bqocn")]
+position = Vector2(107, 152)
+
+[node name="2_Spikes7" parent="2-Spikes" instance=ExtResource("22_bqocn")]
+position = Vector2(60, 136)
+
+[node name="2_Spikes" parent="2-Spikes" instance=ExtResource("22_bqocn")]
+position = Vector2(298, 72)
+
+[node name="2_Spikes2" parent="2-Spikes" instance=ExtResource("22_bqocn")]
+position = Vector2(314, 72)
+
+[node name="2_Spikes8" parent="2-Spikes" instance=ExtResource("22_bqocn")]
+position = Vector2(44, 136)
+
+[node name="2_Spikes9" parent="2-Spikes" instance=ExtResource("22_bqocn")]
+position = Vector2(28, 136)
+
+[node name="Coinss" type="Node" parent="."]
+
+[node name="Coins2" parent="Coinss" instance=ExtResource("10_6dir6")]
 position = Vector2(1930, 199)
 
-[node name="Coins3" parent="." instance=ExtResource("10_6dir6")]
+[node name="Coins3" parent="Coinss" instance=ExtResource("10_6dir6")]
 position = Vector2(2011, 186)
 
-[node name="Coins4" parent="." instance=ExtResource("10_6dir6")]
+[node name="Coins4" parent="Coinss" instance=ExtResource("10_6dir6")]
 position = Vector2(2170, 185)
 
-[node name="Coins5" parent="." instance=ExtResource("10_6dir6")]
+[node name="Coins5" parent="Coinss" instance=ExtResource("10_6dir6")]
 position = Vector2(2316, 186)
 
-[node name="Coins6" parent="." instance=ExtResource("10_6dir6")]
+[node name="Coins6" parent="Coinss" instance=ExtResource("10_6dir6")]
 position = Vector2(2520, 202)
 
-[node name="Coins7" parent="." instance=ExtResource("10_6dir6")]
+[node name="Coins7" parent="Coinss" instance=ExtResource("10_6dir6")]
 position = Vector2(2619, 201)
 
-[node name="Coins8" parent="." instance=ExtResource("10_6dir6")]
+[node name="Coins8" parent="Coinss" instance=ExtResource("10_6dir6")]
 position = Vector2(2778, 154)
 
-[node name="Coins9" parent="." instance=ExtResource("10_6dir6")]
+[node name="Coins9" parent="Coinss" instance=ExtResource("10_6dir6")]
 position = Vector2(2843, 153)
 
-[node name="Coins10" parent="." instance=ExtResource("10_6dir6")]
+[node name="Coins10" parent="Coinss" instance=ExtResource("10_6dir6")]
 position = Vector2(2876, 296)
 
-[node name="Coins11" parent="." instance=ExtResource("10_6dir6")]
+[node name="Coins11" parent="Coinss" instance=ExtResource("10_6dir6")]
 position = Vector2(3043, 246)
 
-[node name="Coins12" parent="." instance=ExtResource("10_6dir6")]
+[node name="Coins12" parent="Coinss" instance=ExtResource("10_6dir6")]
 position = Vector2(3148, 281)
 
-[node name="Coins13" parent="." instance=ExtResource("10_6dir6")]
+[node name="Coins13" parent="Coinss" instance=ExtResource("10_6dir6")]
 position = Vector2(3209, 134)
 
-[node name="Coins14" parent="." instance=ExtResource("10_6dir6")]
+[node name="Coins14" parent="Coinss" instance=ExtResource("10_6dir6")]
 position = Vector2(3171, 19)
+
+[node name="3_spikes" parent="." instance=ExtResource("23_60v8f")]
+position = Vector2(1123, -112)
+
+[node name="3_spikes2" parent="." instance=ExtResource("23_60v8f")]
+position = Vector2(1139, -112)
+
+[node name="3_spikes3" parent="." instance=ExtResource("23_60v8f")]
+position = Vector2(1154, -224)
+
+[node name="3_spikes4" parent="." instance=ExtResource("23_60v8f")]
+position = Vector2(1265, -160)
+
+[node name="3_spikes5" parent="." instance=ExtResource("23_60v8f")]
+position = Vector2(1329, -192)
