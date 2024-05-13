@@ -19,7 +19,10 @@ var was_wall_normal = Vector2.ZERO
 var coins_count : int = 9
 
 var death_pos = Vector2(-8, 1380)
-var level_two_pos = Vector2(670, 1660)
+var level_2_pos = Vector2(670, 1660)
+var level_3_pos = Vector2(1220, 1660)
+var level_3_5top_pos = Vector2(2110, 1595)
+var level_3_5bottom_pos = Vector2(2323, 1885)
 
 func _physics_process(delta):
 	apply_gravity(delta)
@@ -109,8 +112,16 @@ func _on__hazard_detector_area_entered(area):#da 2nd HazardDetector
 	#queue_free()
 
 func _on__h_3_zard_detector_area_entered(area):
-	global_position = level_two_pos
+	global_position = level_2_pos
 
+func _on__h_4_zard_detector_area_entered(area):
+	global_position = level_3_pos
+
+func _on__h_5_zard_detector_area_entered(area):
+	global_position = level_3_5top_pos
+
+func _on__h_6_zard_detector_area_entered(area):
+	global_position = level_3_5bottom_pos
 #func _ready():
 	#pass
 
@@ -118,4 +129,5 @@ func _on__h_3_zard_detector_area_entered(area):
 	#if area.is_in_group("Coins"):
 		#coin_count -= 1
 		#print("coin count: ", collectible_count)
+
 

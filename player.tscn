@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://daqf0l4ldhyk3"]
+[gd_scene load_steps=21 format=3 uid="uid://daqf0l4ldhyk3"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_xknsx"]
 [ext_resource type="Resource" uid="uid://c0hegwvq86b1k" path="res://DefaultMovementData.tres" id="2_0l8ta"]
@@ -84,6 +84,12 @@ size = Vector2(16, 15.3333)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0tt0n"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1y7l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5g3km"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vlw5"]
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 floor_constant_speed = true
@@ -157,6 +163,36 @@ position = Vector2(540, -1699)
 scale = Vector2(0.5, 0.75)
 shape = SubResource("RectangleShape2D_0tt0n")
 
+[node name="4_H4zardDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="4_H4zardDetector"]
+position = Vector2(540, -1699)
+scale = Vector2(0.5, 0.75)
+shape = SubResource("RectangleShape2D_m1y7l")
+
+[node name="5_H5zardDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="5_H5zardDetector"]
+position = Vector2(540, -1699)
+scale = Vector2(0.5, 0.75)
+shape = SubResource("RectangleShape2D_5g3km")
+
+[node name="6_H6zardDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="6_H6zardDetector"]
+position = Vector2(540, -1699)
+scale = Vector2(0.5, 0.75)
+shape = SubResource("RectangleShape2D_3vlw5")
+
 [connection signal="area_entered" from="HazardDetector" to="." method="_on_hazard_detector_area_entered"]
 [connection signal="area_entered" from="2_HazardDetector" to="." method="_on__hazard_detector_area_entered"]
 [connection signal="area_entered" from="3_H3zardDetector" to="." method="_on__h_3_zard_detector_area_entered"]
+[connection signal="area_entered" from="4_H4zardDetector" to="." method="_on__h_4_zard_detector_area_entered"]
+[connection signal="area_entered" from="5_H5zardDetector" to="." method="_on__h_5_zard_detector_area_entered"]
+[connection signal="area_entered" from="6_H6zardDetector" to="." method="_on__h_6_zard_detector_area_entered"]

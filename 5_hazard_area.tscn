@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bj78dbumb83l4"]
+
+[node name="5_HazardArea" type="Area2D"]
+collision_layer = 64
+collision_mask = 0

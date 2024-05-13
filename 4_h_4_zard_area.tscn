@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dalou8ljn8wbn"]
+
+[node name="4_H4zardArea" type="Area2D"]
+collision_layer = 32
+collision_mask = 0
