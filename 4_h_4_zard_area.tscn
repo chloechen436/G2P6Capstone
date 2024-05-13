@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dalou8ljn8wbn"]
+[gd_scene format=3 uid="uid://dra4jg66j7ncd"]
 
 [node name="4_H4zardArea" type="Area2D"]
 collision_layer = 32
