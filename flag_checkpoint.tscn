@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://nvpdtbyt3hay"]
+
+[ext_resource type="Texture2D" uid="uid://by4tui2ynumre" path="res://assets/Flag.png" id="1_ciyk3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34i6f"]
+atlas = ExtResource("1_ciyk3")
+region = Rect2(1904, 0, 272, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o44em"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34i6f")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="FlagCheckpoint" type="CharacterBody2D"]
+scale = Vector2(0.1, 0.1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_o44em")
+animation = &"idle"

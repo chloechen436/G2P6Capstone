@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bkedmtoe4svf1"]
+[gd_scene load_steps=31 format=3 uid="uid://bkedmtoe4svf1"]
 
 [ext_resource type="Script" path="res://temple_map.gd" id="1_77e25"]
 [ext_resource type="PackedScene" uid="uid://daqf0l4ldhyk3" path="res://player.tscn" id="1_618ui"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://7nqfyow6rxmi" path="res://4_spikes.tscn" id="24_gufvw"]
 [ext_resource type="PackedScene" uid="uid://bb0xxnjwfa0uq" path="res://5_spikes.tscn" id="25_unqnh"]
 [ext_resource type="PackedScene" uid="uid://b2hr4ai6j0to" path="res://6_spikes.tscn" id="26_ylgo5"]
+[ext_resource type="PackedScene" uid="uid://nvpdtbyt3hay" path="res://flag_checkpoint.tscn" id="27_dq3l6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_obabp"]
 texture = ExtResource("1_qyuqs")
@@ -470,8 +471,10 @@ offset_right = -7.0
 offset_bottom = -42.0
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="CoinsRemaining" parent="CanvasLayer2" instance=ExtResource("13_m2he2")]
+visible = false
 metadata/_edit_use_anchors_ = true
 
 [node name="CoinCollectedSound" type="AudioStreamPlayer2D" parent="."]
@@ -1635,3 +1638,25 @@ position = Vector2(3276, 136)
 
 [node name="6_spikes11" parent="SPIKES/6-Spikes" instance=ExtResource("26_ylgo5")]
 position = Vector2(3292, 120)
+
+[node name="Checkpoints" type="Node" parent="."]
+
+[node name="FlagCheckpoint" parent="Checkpoints" instance=ExtResource("27_dq3l6")]
+position = Vector2(343, 33)
+scale = Vector2(0.1, 0.1)
+
+[node name="FlagCheckpoint2" parent="Checkpoints" instance=ExtResource("27_dq3l6")]
+position = Vector2(1241, -47)
+scale = Vector2(0.1, 0.1)
+
+[node name="FlagCheckpoint3" parent="Checkpoints" instance=ExtResource("27_dq3l6")]
+position = Vector2(1739, -47)
+scale = Vector2(0.1, 0.1)
+
+[node name="FlagCheckpoint4" parent="Checkpoints" instance=ExtResource("27_dq3l6")]
+position = Vector2(2851, 177)
+scale = Vector2(0.1, 0.1)
+
+[node name="FlagCheckpoint5" parent="Checkpoints" instance=ExtResource("27_dq3l6")]
+position = Vector2(2653, -111)
+scale = Vector2(0.1, 0.1)
