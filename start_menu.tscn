@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cela5gc54eiau"]
 
 [ext_resource type="Script" path="res://start_menu.gd" id="1_18sx0"]
-[ext_resource type="Texture2D" uid="uid://cnd6u3hh5lyos" path="res://menulosttemple.png" id="2_evqou"]
+[ext_resource type="Texture2D" uid="uid://27nv0ku8anxd" path="res://menulosttemple.png" id="2_evqou"]
 
 [sub_resource type="FontFile" id="FontFile_gb0ks"]
 cache/0/10/0/ascent = 0.0
