@@ -23,6 +23,8 @@ var level_2_pos = Vector2(670, 1660)
 var level_3_pos = Vector2(1220, 1660)
 var level_3_5top_pos = Vector2(2110, 1595)
 var level_3_5bottom_pos = Vector2(2323, 1885)
+var level_4_pos = Vector2(3006, 1750)
+var level_5_pos = Vector2(4830, 2075)
 
 func _physics_process(delta):
 	apply_gravity(delta)
@@ -131,3 +133,11 @@ func _on__h_6_zard_detector_area_entered(area):
 		#print("coin count: ", collectible_count)
 
 
+
+
+func _on__h_7_zard_detector_area_entered(area):
+	global_position = level_4_pos
+
+
+func _on__h_8_zard_detector_area_entered(area):
+	global_position = level_5_pos
