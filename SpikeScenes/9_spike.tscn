@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvls2ytq84o27"]
+
+[ext_resource type="Texture2D" uid="uid://bery1gkgvet26" path="res://spikes.png" id="1_mbchk"]
+[ext_resource type="PackedScene" uid="uid://dggvsh5ks3apm" path="res://9_hazard_area.tscn" id="2_m7m8n"]
+
+[node name="9_spike" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mbchk")
+
+[node name="9_HazardArea" parent="." instance=ExtResource("2_m7m8n")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="9_HazardArea"]
+polygon = PackedVector2Array(-8, 8, -5, 2, -4, 2, -1, 8)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="9_HazardArea"]
+position = Vector2(8, 0)
+polygon = PackedVector2Array(-8, 8, -5, 2, -4, 2, -1, 8)
