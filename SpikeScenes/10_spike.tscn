@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ucurcvmrkdkl"]
+[gd_scene load_steps=3 format=3 uid="uid://b1r655fwcigkp"]
 
 [ext_resource type="Texture2D" uid="uid://bery1gkgvet26" path="res://spikes.png" id="1_ohqcp"]
-[ext_resource type="PackedScene" uid="uid://b03lf8mggsn6" path="res://10_hazard_area.tscn" id="2_kqs5x"]
+[ext_resource type="PackedScene" uid="uid://b8gaevfb3by4d" path="res://10_hazard_area.tscn" id="2_kqs5x"]
 
 [node name="10_spike" type="Node2D"]
 
