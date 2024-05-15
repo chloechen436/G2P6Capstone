@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://daqf0l4ldhyk3"]
+[gd_scene load_steps=25 format=3 uid="uid://daqf0l4ldhyk3"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_xknsx"]
 [ext_resource type="Resource" uid="uid://c0hegwvq86b1k" path="res://DefaultMovementData.tres" id="2_0l8ta"]
@@ -94,6 +94,10 @@ size = Vector2(16, 15.3333)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gkcat"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7hhk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0syox"]
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 floor_constant_speed = true
@@ -122,6 +126,7 @@ wait_time = 0.001
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(540, -1698)
+zoom = Vector2(0.7, 0.7)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
@@ -215,6 +220,24 @@ position = Vector2(540, -1699)
 scale = Vector2(0.5, 0.75)
 shape = SubResource("RectangleShape2D_gkcat")
 
+[node name="9_H9zardDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="9_H9zardDetector"]
+position = Vector2(540, -1699)
+scale = Vector2(0.5, 0.75)
+shape = SubResource("RectangleShape2D_n7hhk")
+
+[node name="10_H10zardDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2048
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="10_H10zardDetector"]
+position = Vector2(540, -1699)
+scale = Vector2(0.5, 0.75)
+shape = SubResource("RectangleShape2D_0syox")
+
 [connection signal="area_entered" from="HazardDetector" to="." method="_on_hazard_detector_area_entered"]
 [connection signal="area_entered" from="2_HazardDetector" to="." method="_on__hazard_detector_area_entered"]
 [connection signal="area_entered" from="3_H3zardDetector" to="." method="_on__h_3_zard_detector_area_entered"]
@@ -223,3 +246,5 @@ shape = SubResource("RectangleShape2D_gkcat")
 [connection signal="area_entered" from="6_H6zardDetector" to="." method="_on__h_6_zard_detector_area_entered"]
 [connection signal="area_entered" from="7_H7zardDetector" to="." method="_on__h_7_zard_detector_area_entered"]
 [connection signal="area_entered" from="8_H8zardDetector" to="." method="_on__h_8_zard_detector_area_entered"]
+[connection signal="area_entered" from="9_H9zardDetector" to="." method="_on__h_9_zard_detector_area_entered"]
+[connection signal="area_entered" from="10_H10zardDetector" to="." method="_on__h_10_zard_detector_area_entered"]
