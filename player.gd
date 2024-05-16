@@ -25,6 +25,7 @@ var level_3_5top_pos = Vector2(2110, 1595)
 var level_3_5bottom_pos = Vector2(2323, 1885)
 var level_4_pos = Vector2(3006, 1750)
 var level_5_pos = Vector2(4830, 2075)
+var level_5_5pos = Vector2(5530, 2060)
 
 func _physics_process(delta):
 	apply_gravity(delta)
@@ -111,7 +112,6 @@ func _on_hazard_detector_area_entered(area):
 
 func _on__hazard_detector_area_entered(area):#da 2nd HazardDetector
 	global_position = Vector2(-210, 1740)
-	#queue_free()
 
 func _on__h_3_zard_detector_area_entered(area):
 	global_position = level_2_pos
@@ -124,6 +124,13 @@ func _on__h_5_zard_detector_area_entered(area):
 
 func _on__h_6_zard_detector_area_entered(area):
 	global_position = level_3_5bottom_pos
+
+func _on__h_7_zard_detector_area_entered(area):
+	global_position = level_4_pos
+
+func _on__h_8_zard_detector_area_entered(area):
+	global_position = level_5_pos
+	
 #func _ready():
 	#pass
 
@@ -135,9 +142,7 @@ func _on__h_6_zard_detector_area_entered(area):
 
 
 
-func _on__h_7_zard_detector_area_entered(area):
-	global_position = level_4_pos
 
 
-func _on__h_8_zard_detector_area_entered(area):
-	global_position = level_5_pos
+func _on__h_11_zard_detector_area_entered(area):
+	global_position = level_5_5pos
