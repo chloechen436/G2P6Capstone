@@ -132,7 +132,16 @@ func _on__h_7_zard_detector_area_entered(area):
 
 func _on__h_8_zard_detector_area_entered(area):
 	global_position = level_5_pos
-	
+
+func _on__h_11_zard_detector_area_entered(area):
+	global_position = level_5_5pos
+
+func _on__h_9_zard_detector_area_entered(area):
+	global_position = level_6_pos
+
+func _on__h_10_zard_detector_area_entered(area):
+	global_position = level_7_pos
+
 #func _ready():
 	#pass
 
@@ -141,19 +150,3 @@ func _on__h_8_zard_detector_area_entered(area):
 		#coin_count -= 1
 		#print("coin count: ", collectible_count)
 
-
-
-
-
-
-func _on__h_11_zard_detector_area_entered(area):
-	global_position = level_5_5pos
-
-
-func _on__h_9_zard_detector_area_entered(area):
-	global_position = level_6_pos
-	#global_position = 
-
-
-func _on__h_10_zard_detector_area_entered(area):
-	global_position = level_7_pos
