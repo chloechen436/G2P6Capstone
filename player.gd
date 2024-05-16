@@ -26,6 +26,8 @@ var level_3_5bottom_pos = Vector2(2323, 1885)
 var level_4_pos = Vector2(3006, 1750)
 var level_5_pos = Vector2(4830, 2075)
 var level_5_5pos = Vector2(5530, 2060)
+var level_6_pos = Vector2(6880, 2283)
+var level_7_pos = Vector2(7720, 2235)
 
 func _physics_process(delta):
 	apply_gravity(delta)
@@ -146,3 +148,12 @@ func _on__h_8_zard_detector_area_entered(area):
 
 func _on__h_11_zard_detector_area_entered(area):
 	global_position = level_5_5pos
+
+
+func _on__h_9_zard_detector_area_entered(area):
+	global_position = level_6_pos
+	#global_position = 
+
+
+func _on__h_10_zard_detector_area_entered(area):
+	global_position = level_7_pos
