@@ -15,6 +15,9 @@ var was_wall_normal = Vector2.ZERO
 @onready var wall_jump_timer = $WallJumpTimer
 
 @onready var bg_music = $"../BGMusic"
+@onready var respawn_sound = $"../RespawnSound"
+
+
 
 var coins_count : int = 9
 
@@ -111,36 +114,47 @@ func update_animations(input_axis):
 
 func _on_hazard_detector_area_entered(area):
 	global_position = death_pos
+	respawn_sound.play()
 
 func _on__hazard_detector_area_entered(area):#da 2nd HazardDetector
 	global_position = Vector2(-210, 1740)
+	respawn_sound.play()
 
 func _on__h_3_zard_detector_area_entered(area):
 	global_position = level_2_pos
+	respawn_sound.play()
 
 func _on__h_4_zard_detector_area_entered(area):
 	global_position = level_3_pos
+	respawn_sound.play()
 
 func _on__h_5_zard_detector_area_entered(area):
 	global_position = level_3_5top_pos
+	respawn_sound.play()
 
 func _on__h_6_zard_detector_area_entered(area):
 	global_position = level_3_5bottom_pos
+	respawn_sound.play()
 
 func _on__h_7_zard_detector_area_entered(area):
 	global_position = level_4_pos
+	respawn_sound.play()
 
 func _on__h_8_zard_detector_area_entered(area):
 	global_position = level_5_pos
+	respawn_sound.play()
 
 func _on__h_11_zard_detector_area_entered(area):
 	global_position = level_5_5pos
+	respawn_sound.play()
 
 func _on__h_9_zard_detector_area_entered(area):
 	global_position = level_6_pos
+	respawn_sound.play()
 
 func _on__h_10_zard_detector_area_entered(area):
 	global_position = level_7_pos
+	respawn_sound.play()
 
 #func _ready():
 	#pass
