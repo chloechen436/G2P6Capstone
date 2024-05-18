@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://dov32to53flc0"]
+
+[ext_resource type="Script" path="res://ninja_star.gd" id="1_5vi5s"]
+[ext_resource type="Texture2D" uid="uid://5vedmwxk4suv" path="res://weapons.png" id="1_7lrnx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dk5pc"]
+atlas = ExtResource("1_7lrnx")
+region = Rect2(310, 284, 155, 142)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lb52g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dk5pc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="NinjaStar" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_5vi5s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_lb52g")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-6, -4, -6, -1, -2, 2, -2, 4, -4, 6, -1, 6, 2, 2, 4, 2, 6, 4, 6, 2, 2, -2, 2, -3, 4, -5, 4, -6, 1, -6, -2, -2, -4, -2)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
