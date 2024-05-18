@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://ury7dbon35fy"]
+
+[ext_resource type="Texture2D" uid="uid://5vedmwxk4suv" path="res://weapons.png" id="1_d10ni"]
+[ext_resource type="Script" path="res://boomerang.gd" id="1_x2tv0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdptl"]
+atlas = ExtResource("1_d10ni")
+region = Rect2(0, 0, 176, 129)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hkyj5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdptl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Boomerang" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_x2tv0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_hkyj5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-2, 2, 2, 2, 3, 1, 3, -5, 7, -5, 7, 1, 3, 5, -2, 5, -3, 4, -3, 3)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
