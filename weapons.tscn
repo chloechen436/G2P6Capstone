@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctyx7hxktsvhn"]
+
+[ext_resource type="Script" path="res://weapons.gd" id="1_0nrch"]
+[ext_resource type="Texture2D" uid="uid://5vedmwxk4suv" path="res://weapons.png" id="1_vwdn2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qg8ln"]
+atlas = ExtResource("1_vwdn2")
+region = Rect2(0, 333, 256, 111)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rnwky"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qg8ln")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="weapons" type="Node2D"]
+script = ExtResource("1_0nrch")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.0472
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_rnwky")
+animation = &"idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = 1.0472
+polygon = PackedVector2Array(-8, -2, 0, -2, 2, -4, 9, 0, 3, 4, 0, 2, -8, 2)
