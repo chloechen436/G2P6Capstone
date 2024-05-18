@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://clpspkmuedrwo"]
 
 [ext_resource type="Script" path="res://Area2D.gd" id="1_n3nh1"]
-[ext_resource type="Texture2D" uid="uid://b5suhufs6fxgn" path="res://assets/Flag.png" id="2_qunsf"]
+[ext_resource type="Texture2D" uid="uid://7rqj08thmoxc" path="res://assets/Flag.png" id="2_qunsf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ql1fy"]
 size = Vector2(74, 53)
@@ -97,6 +97,9 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7sdx3")
+}
 tree_root = SubResource("AnimationNodeStateMachine_4bxmc")
 anim_player = NodePath("../AnimationPlayer")
 parameters/flag_idle/blend_position = Vector2(-0.664524, 0.622807)
