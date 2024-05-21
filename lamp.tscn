@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ctxe1410tpl1n"]
 
 [ext_resource type="Script" path="res://lamp.gd" id="1_pfh1p"]
-[ext_resource type="Texture2D" uid="uid://0xrkbuvr0sd" path="res://Extra Game Stuff/lamp.png" id="1_wx7a1"]
+[ext_resource type="Texture2D" uid="uid://hyathe21oss4" path="res://Extra Game Stuff/lamp.png" id="1_wx7a1"]
 
 [node name="Lamp" type="Area2D"]
 collision_layer = 0

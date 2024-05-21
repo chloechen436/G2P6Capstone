@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b10c7vmjt1wil"]
 
 [ext_resource type="Script" path="res://katana.gd" id="1_bownj"]
-[ext_resource type="Texture2D" uid="uid://c4xvahi3dtiht" path="res://assets/KatanaEvening.png" id="1_ct4j4"]
+[ext_resource type="Texture2D" uid="uid://ctll28tn0y2eb" path="res://assets/KatanaEvening.png" id="1_ct4j4"]
 
 [node name="Katana" type="Area2D"]
 collision_layer = 0
