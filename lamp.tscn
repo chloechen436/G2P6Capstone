@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctxe1410tpl1n"]
+[gd_scene load_steps=4 format=3 uid="uid://ctxe1410tpl1n"]
 
 [ext_resource type="Script" path="res://lamp.gd" id="1_pfh1p"]
 [ext_resource type="Texture2D" uid="uid://hyathe21oss4" path="res://Extra Game Stuff/lamp.png" id="1_wx7a1"]
+[ext_resource type="Texture2D" uid="uid://p58f85rx2m8b" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="3_tb5oa"]
 
 [node name="Lamp" type="Area2D"]
 collision_layer = 0
@@ -16,5 +17,9 @@ texture = ExtResource("1_wx7a1")
 position = Vector2(2.08165e-12, 2)
 scale = Vector2(0.7, 0.7)
 polygon = PackedVector2Array(-5, -9, 5, -9, 5, 5, 4, 5, 4, 7, 5, 7, 5, 9, -5, 9, -5, 7, -4, 7, -4, 5, -6, 5)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_tb5oa")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
